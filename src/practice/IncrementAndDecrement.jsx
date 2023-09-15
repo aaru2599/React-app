@@ -9,13 +9,13 @@ class IncAndDec extends Component{
     }
     IncrementNumber=()=>{
         this.setState((prevValue)=>({
-            number:prevValue.number+2
+            number:Math.min(prevValue.number+2,100)
         }));
     }
     
     DecrementNumber=()=>{
         this.setState((prevValue)=>({
-            number:prevValue.number-2
+            number:Math.max(prevValue.number-2,2)
         }));
     }
 
