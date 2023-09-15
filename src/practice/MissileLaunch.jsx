@@ -34,7 +34,7 @@ export const MissileLauncher = () => {
             <div>LaunchMissile:
             <button onClick={() => { btnClick("launchMissile") }}>{button.launchMissile ? "Active" : "InActive"}</button>
             
-           <div> {isTaskCompleted && <p>Missile Launched</p>}</div>
+           <div> {isTaskCompleted?"MissileLaunched":""}</div>
             </div>
         </div>
     )
