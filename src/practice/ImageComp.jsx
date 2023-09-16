@@ -5,6 +5,7 @@ const ImageComp = () => {
     imageSrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAGbzrhpTi4Q0o5o0JSRVDSZ6zifJth2yxXYg26zgW&s",
     imageAlt:"Image-alt",
     isBlackAndWhite:false,
+    
         
    })
     

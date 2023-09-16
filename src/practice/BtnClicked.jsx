@@ -8,7 +8,7 @@ const btnClick=()=>{
 
 const btnStyle={
 backgroundColor: btnActive?"green":"red",
-color:"white"
+color:"white",
 }
 
 return(

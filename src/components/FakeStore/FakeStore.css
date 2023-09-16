@@ -1,0 +1,20 @@
+.card{
+    width: 300px;
+}
+.card:nth-child(odd){
+    background-color:lightgray;
+}
+.card-header{
+    height: 100px;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-radius: 10px;
+
+}
+main{
+    height: 500;
+    overflow: auto;
+}

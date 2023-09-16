@@ -10,6 +10,7 @@ class IncAndDec extends Component{
     IncrementNumber=()=>{
         this.setState((prevValue)=>({
             number:Math.min(prevValue.number+2,100)
+            
         }));
     }
     
