@@ -4,6 +4,9 @@
 .card:nth-child(odd){
     background-color:lightgray;
 }
+.card:nth-child(even){
+    background-color:lightpink;
+}
 .card-header{
     height: 100px;
 }
@@ -17,4 +20,35 @@ header{
 main{
     height: 500;
     overflow: auto;
+}
+.sectionArea{
+    /* position: absolute; */
+    /* top: 50px; */
+    position: fixed;
+    z-index: 2;
+    
+}
+.navButton {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+/* .cart-btn{
+    background-color: transparent;
+    color: white;
+    border: none;
+} */
+.searchBar{
+    /* top: 10px; */
+    margin-top: 20px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cart-count{
+  color: white;
+  background-color: blue;
+  padding: 2px;
+  
+  border-radius: 50%;
 }
