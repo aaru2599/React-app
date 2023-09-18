@@ -11,7 +11,10 @@ import FormState from './state/FormState'
 import FakeStore from './components/FakeStore/FakeStore'
 import { State03 } from './state/State03';
 import ReactStyle from './state/ReactStyle';
-import ReactStyle01 from './state/ReactStyle01';
+import { ClassBinding } from './components/ClassBindingComponent/ClassBinding';
+import ParantTask from './components/Props/ParantTask';
+import ParantComponent from './components/PropsTask/ParantCompnent';
+// import ReactStyle01 from './state/ReactStyle01';
 // import NasaComponent from './components/NasaAPI/Nasa.Component'
 // import NasaComponent from './components/NasaAPI/Nasa.Component'
 
@@ -22,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 <React.Fragment>
 
-<ReactStyle01/>
+< ParantComponent/>
+
 </React.Fragment>
     )
