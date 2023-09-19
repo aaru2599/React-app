@@ -16,8 +16,7 @@ const onValChange=(val)=>{
            {name.FirstName&&name.LastName&&
             (
                 <div>
-            <p>FirstName:{name.FirstName}</p>
-             <p>LastName:{name.LastName}</p>
+            <p>Hello.! My name is {name.FirstName} People call me  {name.LastName}.</p>
             </div>
             )
            }
