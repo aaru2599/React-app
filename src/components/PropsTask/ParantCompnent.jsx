@@ -53,7 +53,10 @@ const ParantComponent = () => {
                 <button className="btn btn-primary w-100" onClick={handleBtnClick}>Submit</button>
 
             </div>
-           {button &&<ChildComponent name={formData.name} email={formData.email} password={formData.password} number={formData.number} gender={formData.gender} />}
+            <div>
+            {button &&<ChildComponent name={formData.name} email={formData.email} password={formData.password} number={formData.number} gender={formData.gender} />}
+            </div>
+          
         </div>
     )
 

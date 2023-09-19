@@ -13,6 +13,14 @@ export const ClassBinding=()=>{
             setBtnTheme("btn btn-dark w-100 ")
         }
     }
+    function handleNameChange(e){
+        if(e.target.value== ""){
+            setTheme("border p-3 border-primary border-3 bg-danger rounded")
+        }
+        else{
+            setTheme("border p-3 border-primary border-3 bg-success rounded")
+        }
+    }
  return(
     <div className="container-fluid">
         <div className="d-flex justify-content-center align-items-center" style={{height:"500px"}}>
@@ -24,7 +32,7 @@ export const ClassBinding=()=>{
                 <h2><span className="bi bi-person-fill"></span>User Login   </h2>
                 <dl>
                     <dt>User Name</dt>
-                    <dd><input type="text" className="form-control" /></dd>
+                    <dd>< input type="text" className="form-control" onChange={handleNameChange}/></dd>
                     <dt>Password</dt>
                      <dd><input className="form-control" type="password" /></dd>
                     <button className={btnTheme} >Login</button>
