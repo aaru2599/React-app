@@ -1,0 +1,15 @@
+/* img{
+    cursor: pointer;
+}
+marquee{
+    padding: 50px;
+}
+img:hover{
+    
+    transform: scale(1.2);
+    box-shadow: 2px 2px 2px black;
+    transition: .5s;
+}
+img{
+    transition: 1s;
+} */

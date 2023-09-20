@@ -22,9 +22,7 @@ const NasaComponent = () => {
             setMarsh(data)
         })
         
-    },[]
-
-    )
+    },[])
     return (
         <div className="container-fluid">
             <h2>Marsh Rower data</h2>

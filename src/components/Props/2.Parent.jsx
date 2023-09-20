@@ -12,8 +12,10 @@ export const Parant02=()=>{
     }
     return(
         <div>
+            
            <p>FirstName:{name.FirstName}</p>
            <p>LastName:{name.LastName}</p>
+           
             <Child02 onValChange={onValChange}/>
 
         </div>
