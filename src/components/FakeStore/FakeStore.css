@@ -1,11 +1,26 @@
+
 .card{
-    width: 300px;
+    width: 250px;
+    transition:  .5s;
+}
+.div-container{
+    overflow: hidden;
+    
+
+}
+.btn:hover{
+    background-color: darkcyan;
+}
+.card:hover{
+    cursor: pointer;
+    transition:   .5s;
+    scale: 1.05;
 }
 .card:nth-child(odd){
     background-color:lightgray;
 }
 .card:nth-child(even){
-    background-color:lightpink;
+    background-color:lightpink
 }
 .card-header{
     height: 100px;
@@ -19,32 +34,32 @@ header{
 }
 main{
     height: 500;
-    overflow: auto;
+    overflow: hidden;
 }
 .sectionArea{
     /* position: absolute; */
-    /* top: 50px; */
-    position: fixed;
-    z-index: 2;
+    top: 80px;
+    position: sticky;
+    /* z-index: 2; */
     
 }
-.navButton {
-    background-color: transparent;
-    color: white;
-    border: none;
-}
-/* .cart-btn{
+/* .navButton {
     background-color: transparent;
     color: white;
     border: none;
 } */
-.searchBar{
-    /* top: 10px; */
+.cart-btn{
+    background-color: transparent;
+    color: black;
+    border: none;
+}
+/* .searchBar{
+    top: 10px;
     margin-top: 20px;
     width: 500px;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 .cart-count{
   color: white;
   background-color: blue;
@@ -52,3 +67,77 @@ main{
   
   border-radius: 50%;
 }
+.LoaderStyle{
+    
+    margin-left: auto;
+    margin-right: auto;
+    /* height: 500vh;
+    top: 50%; */
+}
+.heart-btn{
+   color:red;
+   
+   
+}
+.main-div{
+    /* position: relative; */
+}
+
+body{
+    background-color: darkcyan;
+}
+
+  /* Add a transition effect to the search bar */
+  .search-bar {
+    display: none;
+    /* position: absolute; */
+    opacity: 0;
+    width: 500px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .search-bar.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Define a fade-in and exit animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes exit {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+      display: none; /* Hide it at the end of the animation */
+    }
+  }
+  
+  /* Apply the animations to the search bar */
+  .search-bar.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .search-bar.exit {
+    animation: exit 0.3s ease-in-out;
+  }
+  
+
+

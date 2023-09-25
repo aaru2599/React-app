@@ -20,7 +20,7 @@ const MouseEvent01 = () => {
                     {
                         images.map(image =>
                             <div className="mb-2 p-1 border  border-3 border-primary" style={{ width: "60px" }} key={image}>
-                                <img src={image} onMouseOver={handleMouseOver} width={50} height={50} />
+                                <img src={image} onClick={handleMouseOver} width={50} height={50} />
                             </div>
                         )
                     }

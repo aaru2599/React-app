@@ -54,7 +54,7 @@ const FakeStore = () => {
             .then((data) => {
                 cartItem.push(data)
                 // console.log(cartItem);
-                getCartCount()
+                getCartCount(data)
                 alert(`${data.title}\n Added to the cart`)
             })
     }
@@ -63,7 +63,7 @@ const FakeStore = () => {
         <div className="container-fluid">
             <header className="bg-dark text-white mt-2 d-flex justify-content-between p-2">
                 <div>
-                    <h2 style={{fontWeight:"bold"}}>FakeStore</h2>
+                    <h2 style={{ fontWeight: "bold" }}>FakeStore</h2>
                 </div>
                 <div>
                     <span className="me-4">Home</span>
@@ -83,10 +83,12 @@ const FakeStore = () => {
                     <div className="modal fade" id="cart">
                         <div className="modal-dialog">
                             <div className="modal-content">
+
                                 <div className="modal-header">
                                     <h2 className="text-primary">Your cart item</h2>
                                     <button data-bs-dismiss="modal" className="btn btn-close"></button>
                                 </div>
+                                <div><h2>cart content</h2></div>
                             </div>
 
                         </div>
