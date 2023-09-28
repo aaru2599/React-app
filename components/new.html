@@ -15,6 +15,23 @@
     <!-- Display the selected image here -->
     <img id="selectedImage" src="" alt="Selected Image">
     
-   
+    <script>
+        // JavaScript code to display the selected image
+        const imageUpload = document.getElementById("imageUpload");
+        const selectedImage = document.getElementById("selectedImage");
+
+        imageUpload.addEventListener("change", function () {
+            const file = imageUpload.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    selectedImage.src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 </html>

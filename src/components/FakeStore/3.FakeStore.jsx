@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { PuffLoader, CircleLoader } from "react-spinners";
 
 import "./FakeStore.css"
+import { useMemo } from "react";
 
 const ProductFakeStore = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -51,15 +52,22 @@ const ProductFakeStore = () => {
         getCartCount()
 
     }, []);
-    useEffect(() => {
+    // useEffect(() => {
+    //     const filterList = products.filter((item) => {
+    //         return item.title.toLowerCase().search(search.toLowerCase()) !== -1
+    //     })
+    //     setFilterProducts(filterList)
+    //     console.log(filterList);
+    // }, [products, search])
+    const filteredListProduct = useMemo(() => {
         const filterList = products.filter((item) => {
             return item.title.toLowerCase().search(search.toLowerCase()) !== -1
         })
-        setFilterProducts(filterList)
+        // setFilterProducts(filterList)
+        // console.log(filterList);
+        return filterList
     }, [products, search])
-    // function handleCategory(e){
 
-    // }
 
     function handleValueChange(e) {
         if (e.target.value === "All") {
@@ -136,7 +144,7 @@ const ProductFakeStore = () => {
                 <div className="main-div">
                     {
                         <div className={`search-bar ${searchBar ? 'active fade-in' : 'exit'}`}>
-                            <input type="search" className="form-control" onKeyUp={(e) => setSearch(e.target.value)} placeholder="Search..." />
+                            <input type="search" className="form-control" onChange={(e) => setSearch(e.target.value)} placeholder="Search..." />
                         </div>
                     }
                     <hr />
@@ -163,7 +171,7 @@ const ProductFakeStore = () => {
                                             {
 
 
-                                                filterProducts.map((product) =>
+                                                filteredListProduct.map((product) =>
 
                                                     <div key={product.id} className="card m-2 p-2 position-relative">
                                                         <img src={product.image} height={200} className="card-img-top" />

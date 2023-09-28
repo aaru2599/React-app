@@ -76,32 +76,52 @@ export const FilteredImage = () => {
         <div className="container-fluid row  p-4">
             <h1>Image Uploader</h1>
             {/* <input type="file" onChange={photoChanged} /> */}
-            <input className="form-input" type="file" accept="image/*" onChange={handleImageChange} />
+            <input className="form-input" type="file" accept="image/*" onChange={handleImageChange}  data-bs-toggle="modal" data-bs-target="#exampleModal"/>
 
-            <div className="container-fluid  d-flex justify-content-between">
-                <div className=" image-div ">
-                    {
-                        filters.map((filter, index) =>
-                            <img onClick={handleImageFilter} className="filterImage" key={index}
-                                src={image}
-                                style={{ filter: filter }} />
-                        )
-                    }
-                </div>
-                {selectedImage && (
-                    <div>
-                        <h2>Selected Image:</h2>
-                        <img src={selectedImage}
-                            style={{ filter: filterdImage.imageStyle }}
-                            ref={domEl} />
-                        <div className="d-flex justify-content-center mt-4 align-items-center">
-                            <button className="btn btn-primary w-50 " onClick={imageDownload}>Download</button>
+            ``
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog 	modal-fullscreen-xl-down">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div className="container-fluid  d-flex justify-content-between">
+                                <div className=" image-div ">
+                                    {
+                                        filters.map((filter, index) =>
+                                            <img onClick={handleImageFilter} className="filterImage" key={index}
+                                                src={image}
+                                                style={{ filter: filter }} />
+                                        )
+                                    }
+                                </div>
+                                {selectedImage && (
+                                    <div>
+                                        <h2>Selected Image:</h2>
+                                        <img src={selectedImage}
+                                            style={{ filter: filterdImage.imageStyle }}
+                                            ref={domEl} />
+                                        <div className="d-flex justify-content-center mt-4 align-items-center">
+
+                                        </div>
+
+                                    </div>
+                                )}
+
+                            </div>
 
                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            {/* <button className="btn btn-primary w-50 " >Download</button> */}
+                            <button type="button" class="btn btn-primary" onClick={imageDownload}>Download</button>
 
+
+                        </div>
                     </div>
-                )}
-
+                </div>
             </div>
 
         </div>
