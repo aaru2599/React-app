@@ -97,7 +97,7 @@ const ProductFakeStore = () => {
         setSearchBar(!searchBar)
     }
 
-    console.log("Re-Render: ", isLoading);
+   
     // console.log("cartLoading",cartLoading);
     console.log("cartLoading", cartLoading);
     function handleHeartCount(e) {
