@@ -3,6 +3,7 @@ import { PuffLoader, CircleLoader } from "react-spinners";
 
 import "./FakeStore.css"
 import { useMemo } from "react";
+import ShimmerEffect from "./ShimmerEffect";
 
 const ProductFakeStore = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -139,7 +140,7 @@ const ProductFakeStore = () => {
                 </div>
             </header>
             {isLoading ? (
-                <PuffLoader className="LoaderStyle" color="white" />
+                <ShimmerEffect className="LoaderStyle" color="white" />
             ) : (
                 <div className="main-div">
                     {
@@ -165,7 +166,7 @@ const ProductFakeStore = () => {
                         </nav>
                         <main>
                             {
-                                cartLoading ? (<CircleLoader color="white" style={cartLoader} />) :
+                                cartLoading ? (<ShimmerEffect color="white" style={cartLoader} />) :
                                     (
                                         <div className="d-flex div-card flex-wrap w-5 ">
                                             {
