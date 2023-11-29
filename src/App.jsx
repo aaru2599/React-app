@@ -1,31 +1,31 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
-import Header from './components/React-Router-Dom/Header'
-import Home from './components/React-Router-Dom/Pages/Home'
-import About from './components/React-Router-Dom/Pages/About'
-import Profile from './components/React-Router-Dom/Pages/Profile'
-import NotFound from './components/React-Router-Dom/Pages/NotFound'
+// App.js
+import React, { useState } from 'react';
+import ProductForm from './ProductForrm/ProductForm';
+import ProductList from './ProductForrm/ProductList';
+
 
 function App() {
+  const [products, setProducts] = useState([]);
+  const [showForm, setShowForm] = useState(false);
 
+  const addProduct = (product) => {
+    setProducts([...products, product]);
+  };
+
+  const handleFormSuccess = () => {
+    setShowForm(false);
+  };
 
   return (
-    <BrowserRouter getUserConfirmation="">
     <div>
-    <Header/>
+      {showForm ? (
+        <ProductForm onAddProduct={addProduct} onSuccess={handleFormSuccess} />
+      ) : (
+        <button onClick={() => setShowForm(true)}>Add Product</button>
+      )}
+      <ProductList products={products} />
     </div>
-   <Routes>
-   <Route path='/' Component={Home}/>
-    <Route path='/About' Component={About}/>
-    <Route path='/Profile' Component={Profile}/>
-    <Route Component={NotFound}/>
-   </Routes>
-
-    </BrowserRouter>
-
-        
-    
-  )
+  );
 }
 
-export default App
+export default App;

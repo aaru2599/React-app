@@ -6,20 +6,47 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "bootstrap/dist/js/bootstrap.bundle.js"
 import Header from './components/React-Router-Dom/Header';
-import App from './App';
+
 import ProductsLayout from './components/WithoutHOC/Products.Layout';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import UserLayout from './components/WithoutHOC/user.Layout ';
 import ProductLayoutWithHOC from './components/WithHOC/2.Products.Layout';
 import UserLayoutHOC from './components/WithHOC/2.User.layout';
 import RenderButton from './components/WithHOC/3.RenderButton';
+import ParantComponent from './components/PropsTask/ParantCompnent';
+import ParentComponent from './components/PropsTask/ParentChildTask/1.ParentComponent';
+import PDParentUC from './components/ContextAPI/1.parent1';
+import App from './App';
+import Caching from './components/Caching/Caching';
+import PasswordField from './components/PasswordFieldTask/PasswordField';
 const myRouter = createBrowserRouter([
+  {
+    path:"/password",
+    element:<PasswordField/>
+  },
+  {
+    path: "/caching",
+    element: <Caching />
+  },
+  {
+    path: "/contextapi",
+    element: <PDParentUC />
+  },
+  {
+    path:"/app",
+    element:<App/>
+  }
+  ,
   {
     path: "/",
     element: (<div>
       <ProductsLayout /> <hr />
       <UserLayout />
     </div>)
+  },
+  {
+    path: "/compo",
+    element: <ParentComponent />
   },
   {
     path: "/user",
@@ -34,8 +61,8 @@ const myRouter = createBrowserRouter([
     </div>
   },
   {
-    path:"/button",
-    element:<RenderButton/>
+    path: "/button",
+    element: <RenderButton />
   }
 ])
 
