@@ -19,7 +19,17 @@ import PDParentUC from './components/ContextAPI/1.parent1';
 import App from './App';
 import Caching from './components/Caching/Caching';
 import PasswordField from './components/PasswordFieldTask/PasswordField';
+import FuncComp from './components/useMemo/6.WithoutUseMemo';
+import FuncCompMemo from './components/useMemo/7.WithUseMemo';
 const myRouter = createBrowserRouter([
+  {
+    path:"/withusememo",
+    element:<FuncCompMemo/>
+      },
+  {
+path:"/withoutusememo",
+element:<FuncComp/>
+  },
   {
     path:"/password",
     element:<PasswordField/>

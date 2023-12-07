@@ -1,38 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Insert Image</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+
 <body>
-    <h1>My Web Page</h1>
-    
-    <form action="upload.php" method="POST" enctype="multipart/form-data">
-        <label for="imageUpload">Select an image:</label>
-        <input type="file" id="imageUpload" name="imageUpload">
-        <input type="submit" value="Upload">
-    </form>
-    
-    <!-- Display the selected image here -->
-    <img id="selectedImage" src="" alt="Selected Image">
-    
-    <script>
-        // JavaScript code to display the selected image
-        const imageUpload = document.getElementById("imageUpload");
-        const selectedImage = document.getElementById("selectedImage");
+    <input onkeyup="inputUp(event)" type="text">
 
-        imageUpload.addEventListener("change", function () {
-            const file = im
-            ageUpload.files[0];
-            if (file) {
-                const reader = new FileReader();
-
-                reader.onload = function (e) {
-                    selectedImage.src = e.target.result;
-                };
-
-                reader.readAsDataURL(file);
-            }
-        });
-    </script>
 </body>
+<script>
+    const inputUp = (e) => {
+        console.log(e.target.defaultValue);
+    }
+</script>
+
 </html>
