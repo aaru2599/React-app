@@ -21,18 +21,33 @@ import Caching from './components/Caching/Caching';
 import PasswordField from './components/PasswordFieldTask/PasswordField';
 import FuncComp from './components/useMemo/6.WithoutUseMemo';
 import FuncCompMemo from './components/useMemo/7.WithUseMemo';
+import ChildComp from './components/Practice/Child';
+import ParentV1 from './components/Practice/Parant';
+import Form from './components/Interview/Form';
 const myRouter = createBrowserRouter([
   {
-    path:"/withusememo",
-    element:<FuncCompMemo/>
-      },
-  {
-path:"/withoutusememo",
-element:<FuncComp/>
+    path: "/withusememo",
+    element: <FuncCompMemo />
   },
   {
-    path:"/password",
-    element:<PasswordField/>
+    path: "/form",
+    element: <Form />
+  },
+  {
+    path: "/parant",
+    element: <ParentV1 />
+  },
+  {
+    path: "/child",
+    element: <ParentV1 />
+  },
+  {
+    path: "/withoutusememo",
+    element: <FuncComp />
+  },
+  {
+    path: "/password",
+    element: <PasswordField />
   },
   {
     path: "/caching",
@@ -43,8 +58,8 @@ element:<FuncComp/>
     element: <PDParentUC />
   },
   {
-    path:"/app",
-    element:<App/>
+    path: "/app",
+    element: <App />
   }
   ,
   {
