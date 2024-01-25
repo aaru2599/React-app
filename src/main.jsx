@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom/client'
 import "bootstrap-icons/font/bootstrap-icons.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "bootstrap/dist/js/bootstrap.bundle.js"
-import Header from './components/React-Router-Dom/Header';
 
 import ProductsLayout from './components/WithoutHOC/Products.Layout';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
@@ -24,10 +23,15 @@ import FuncCompMemo from './components/useMemo/7.WithUseMemo';
 import ChildComp from './components/Practice/Child';
 import ParentV1 from './components/Practice/Parant';
 import Form from './components/Interview/Form';
+import Armstrong from './components/Interview/Armstrong';
 const myRouter = createBrowserRouter([
   {
     path: "/withusememo",
     element: <FuncCompMemo />
+  },
+  {
+    path: "/armstrong",
+    element: <Armstrong />
   },
   {
     path: "/form",
