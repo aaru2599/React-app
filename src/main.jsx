@@ -24,10 +24,15 @@ import ChildComp from './components/Practice/Child';
 import ParentV1 from './components/Practice/Parant';
 import Form from './components/Interview/Form';
 import Armstrong from './components/Interview/Armstrong';
+import UpperCase from './components/Interview/UpperCase';
 const myRouter = createBrowserRouter([
   {
     path: "/withusememo",
     element: <FuncCompMemo />
+  },
+  {
+    path: "/uppercase",
+    element: <UpperCase />
   },
   {
     path: "/armstrong",
