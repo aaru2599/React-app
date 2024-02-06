@@ -25,10 +25,18 @@ import ParentV1 from './components/Practice/Parant';
 import Form from './components/Interview/Form';
 import Armstrong from './components/Interview/Armstrong';
 import UpperCase from './components/Interview/UpperCase';
+import Counter from './components/CustomHooks/Counter';
+import Counter2 from './components/CustomHooks/Counter2';
 const myRouter = createBrowserRouter([
   {
     path: "/withusememo",
     element: <FuncCompMemo />
+  },
+  {
+    path: "/counter",
+    element: <div className='d-flex justify-content-between'>
+      <Counter /> <Counter2/>
+    </div>
   },
   {
     path: "/uppercase",
