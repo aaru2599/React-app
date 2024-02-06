@@ -29,6 +29,7 @@ import Counter from './components/CustomHooks/Counter';
 import Counter2 from './components/CustomHooks/Counter2';
 import ApiLayout from './components/CustomHooks/APICall/Api.Layout';
 import NewApiData from './components/CustomHooks/APICall/NewApiData';
+import Parant from './components/Hooks/UseCallback/Parant';
 const myRouter = createBrowserRouter([
   {
     path: "/withusememo",
@@ -43,6 +44,10 @@ const myRouter = createBrowserRouter([
   {
     path: "/uppercase",
     element: <UpperCase />
+  },
+  {
+    path: "/usecallback",
+    element: <Parant />
   },
   {
     path: "/apilayout",
