@@ -27,6 +27,8 @@ import Armstrong from './components/Interview/Armstrong';
 import UpperCase from './components/Interview/UpperCase';
 import Counter from './components/CustomHooks/Counter';
 import Counter2 from './components/CustomHooks/Counter2';
+import ApiLayout from './components/CustomHooks/APICall/Api.Layout';
+import NewApiData from './components/CustomHooks/APICall/NewApiData';
 const myRouter = createBrowserRouter([
   {
     path: "/withusememo",
@@ -41,6 +43,12 @@ const myRouter = createBrowserRouter([
   {
     path: "/uppercase",
     element: <UpperCase />
+  },
+  {
+    path: "/apilayout",
+    element: <div>
+      <ApiLayout /><NewApiData/>
+    </div>
   },
   {
     path: "/armstrong",
