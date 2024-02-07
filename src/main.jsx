@@ -31,6 +31,9 @@ import ApiLayout from './components/CustomHooks/APICall/Api.Layout';
 import NewApiData from './components/CustomHooks/APICall/NewApiData';
 import Parant from './components/Hooks/UseCallback/Parant';
 import UseRef from './components/Hooks/UseRef/useRef';
+import ClassDemoComponent from './components/ClassBindingComponent/ClassDemoComponent';
+import { GridHomeCompo } from './components/CUstomizedComponents/GridComponent/GridHomeComponent';
+import { Prctsss } from './components/CUstomizedComponents/GridComponent/Nitin';
 const myRouter = createBrowserRouter([
   {
     path: "/withusememo",
@@ -49,6 +52,18 @@ const myRouter = createBrowserRouter([
   {
     path: "/useref",
     element: <UseRef />
+  },
+  {
+    path: "/classdemocomponent",
+    element: <ClassDemoComponent />
+  },
+  {
+    path: "/GridHomeCompo",
+    element: <GridHomeCompo />
+  },
+  {
+    path: "/Prctsss",
+    element: <Prctsss />
   },
   {
     path: "/usecallback",

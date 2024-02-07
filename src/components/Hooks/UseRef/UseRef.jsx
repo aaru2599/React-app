@@ -15,6 +15,7 @@ const UseRef = () => {
   return (
     <div className='d-flex justify-content-center align-items-center' style={{height:"100vh"}}>
         <input type="text" 
+        className='btn btn-success border-bottom outline-0'
         ref={refElem}
         value={input}
         onChange={(e)=>setInput(e.target.value)}

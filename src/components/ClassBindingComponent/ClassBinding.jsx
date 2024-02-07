@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState ,React} from "react"
 
 export const ClassBinding=()=>{
     const [theme,setTheme]=useState(" border p-3 border-primary border-3 rounded")

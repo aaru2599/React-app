@@ -1,4 +1,5 @@
 import { GridComponent } from "./GridComponent";
+import React from "react";
 
 export function GridHomeCompo(){
 return(

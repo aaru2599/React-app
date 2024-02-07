@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState ,React} from "react"
 
 const ClassDemoComponent = () => {
     const [cities] = useState(["BPL", "Channai", "HYD", "BLR", "IDR", "PUNE"]);
