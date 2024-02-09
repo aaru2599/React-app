@@ -8,7 +8,7 @@
  */
 
 import { ToastContainer, toast } from "react-toastify";
-import { useState } from "react";
+import { useState,React } from "react";
 import "react-toastify/dist/ReactToastify.css";
 
 const initialUserSelectionState = {
@@ -68,10 +68,10 @@ const DynamicForm = () => {
     console.log("InputArr : ", inputArr);
     return (
         <>
-            <header>
+            <header className="d-flex flex-column gap-3">
                 <div className="form-element">
-                    <p>Input Type</p>
-                    <select name="type" onChange={onInputSelectionChange}>
+                    <div>Input Type</div>
+                    <select name="type" className="form-control w-50" onChange={onInputSelectionChange}>
                         <option>Select Type</option>
                         <option>Text</option>
                         <option>Email</option>
@@ -79,21 +79,23 @@ const DynamicForm = () => {
                         <option>Checkbox</option>
                     </select>
                 </div>
-                <div className="form-element">
-                    <p>Label</p>
+                <div className="form-element ">
+                    <div>Label</div>
                     <input
                         type="text"
                         placeholder="Enter label"
                         name="label"
+                        className="form-control w-50"
                         onChange={onInputSelectionChange}
                     />
                 </div>
                 <div className="form-element">
-                    <p>Placeholder</p>
+                    <div>Placeholder</div>
                     <input
                         onChange={onInputSelectionChange}
                         type="text"
                         placeholder="Enter Placeholder"
+                        className="form-control w-50"
                         name="placeholder"
                     />
                 </div>
@@ -106,12 +108,13 @@ const DynamicForm = () => {
                 <div>
                     {inputArr.map((item) => {
                         return (
-                            <div key={item.name} className="form-element">
-                                <p>{item.label}</p>
+                            <div key={item.name} className="">
+                                <div>{item.label}</div>
                                 <input
                                     type={item.type}
                                     placeholder={item.placeholder}
                                     name={item.name}
+                                    className="form-control w-50"
                                     value={item.value}
                                     onChange={onDynamicFormInputChange}
                                 />

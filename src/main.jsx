@@ -34,6 +34,10 @@ import UseRef from './components/Hooks/UseRef/useRef';
 import ClassDemoComponent from './components/ClassBindingComponent/ClassDemoComponent';
 import { GridHomeCompo } from './components/CUstomizedComponents/GridComponent/GridHomeComponent';
 import { Prctsss } from './components/CUstomizedComponents/GridComponent/Nitin';
+import HomeComponent from './components/CUstomizedComponents/Home/HomeComponent';
+import DynamicForm from './components/DynamicWebPage/DynamicWebPage';
+import BynDemo01 from './components/EventBinding/ButtonBinding/1.ButtonDemo';
+import Result from './Result';
 const myRouter = createBrowserRouter([
   {
     path: "/withusememo",
@@ -66,8 +70,24 @@ const myRouter = createBrowserRouter([
     element: <Prctsss />
   },
   {
+    path: "/HomeComponent",
+    element: <HomeComponent />
+  },
+  {
     path: "/usecallback",
     element: <Parant />
+  },
+  {
+    path: "/BynDemo01",
+    element: <BynDemo01/>
+  },
+  {
+    path: "/result",
+    element: <Result/>
+  },
+  {
+    path: "/DynamicForm",
+    element: <DynamicForm />
   },
   {
     path: "/apilayout",

@@ -1,5 +1,6 @@
-const EventBinding=()=>{
-    function btnClick(e){
+import React from "react"
+const EventBinding = () => {
+    function btnClick(e) {
         document.write(`
         Button Id:${e.target.id}<br>
         Button Name:${e.target.name}<br>
@@ -8,7 +9,7 @@ const EventBinding=()=>{
         
         `)
     }
-    return(
+    return (
         <div>
             <button id="btn" className="btn btn-primary" name="btnName" value="btnValue" onClick={btnClick}>Submit</button>
         </div>
